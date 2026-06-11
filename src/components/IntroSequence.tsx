@@ -38,7 +38,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: phase === "out" ? 0 : 1 }}
-      transition={{ duration: 0.8, ease: [0.3, 0, 0, 1] }}
+      transition={{ duration: 0.8, ease: [0.3, 0, 0, 1] as const }}
       className="fixed inset-0 z-[100] bg-bg overflow-hidden flex items-end justify-center"
       style={{
         backgroundImage:
@@ -80,7 +80,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
         }
         transition={{
           duration: phase === "out" ? 0.7 : 3.0,
-          ease: phase === "out" ? "easeIn" : [0.22, 1, 0.36, 1],
+          ease: phase === "out" ? "easeIn" as const : [0.22, 1, 0.36, 1] as const,
         }}
         className="relative z-10 h-[88vh] w-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_60px_rgba(0,245,255,0.25)]"
         draggable={false}
@@ -110,7 +110,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
             transition={{
               duration: 0.7,
               delay: phase !== "walk" ? i * 0.18 : 0,
-              ease: [0.16, 1, 0.3, 1],
+              ease: [0.16, 1, 0.3, 1] as const,
             }}
             className="font-display font-extrabold leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,11rem)]"
             style={{
