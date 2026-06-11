@@ -42,7 +42,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
       className="fixed inset-0 z-[100] bg-bg overflow-hidden flex items-end justify-center"
       style={{
         backgroundImage:
-          "radial-gradient(ellipse at 50% 100%, rgba(0,245,255,0.10), transparent 60%), radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.02), transparent 70%)",
+          "radial-gradient(ellipse at 50% 100%, rgba(255,42,61,0.18), transparent 60%), radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.02), transparent 70%)",
       }}
     >
       {/* Floor reflection */}
@@ -82,7 +82,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
           duration: phase === "out" ? 0.7 : 3.0,
           ease: phase === "out" ? "easeIn" as const : [0.22, 1, 0.36, 1] as const,
         }}
-        className="relative z-10 h-[88vh] w-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_60px_rgba(0,245,255,0.25)]"
+        className="relative z-10 h-[88vh] w-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_60px_rgba(255,42,61,0.35)]"
         draggable={false}
       />
 
