@@ -3,14 +3,14 @@
 @import "tw-animate-css";
 
 @theme {
-  --color-ink: #f5f1f1;
-  --color-bg: #080303;
-  --color-card: #120606;
-  --color-card-2: #1a0808;
-  --color-line: #2a0d0d;
+  --color-ink: #fff5f5;
+  --color-bg: #060101;
+  --color-card: #160606;
+  --color-card-2: #200909;
+  --color-line: #3a1010;
   --color-cyan: #ff2a3d;
-  --color-cyan-soft: #ff6470;
-  --color-dim: #7a4a4a;
+  --color-cyan-soft: #ff8a93;
+  --color-dim: #c89898;
   --font-display: 'Syne', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
