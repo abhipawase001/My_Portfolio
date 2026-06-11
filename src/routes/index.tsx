@@ -24,28 +24,15 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const INTRO_KEY = "abhi_intro_played_v1";
-
 function Index() {
-  const [showIntro, setShowIntro] = useState<boolean | null>(null);
+  const [showIntro, setShowIntro] = useState(true);
 
-  useEffect(() => {
-    const played = typeof window !== "undefined" && sessionStorage.getItem(INTRO_KEY);
-    setShowIntro(!played);
-  }, []);
-
-  const handleDone = () => {
-    sessionStorage.setItem(INTRO_KEY, "1");
-    setShowIntro(false);
-  };
-
-  if (showIntro === null) {
-    return <div className="min-h-screen bg-bg" />;
-  }
+  const handleDone = () => setShowIntro(false);
+  const replay = () => setShowIntro(true);
 
   return (
     <>
-      <Portfolio />
+      <Portfolio onReplayIntro={replay} />
       <AnimatePresence>
         {showIntro && <IntroSequence key="intro" onDone={handleDone} />}
       </AnimatePresence>
