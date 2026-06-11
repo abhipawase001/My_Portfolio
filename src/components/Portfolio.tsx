@@ -267,7 +267,7 @@ export function Portfolio() {
           </Tile>
 
           {/* ABOUT */}
-          <Tile id-anchor="about" className="col-span-4 md:col-span-5 p-8" index={9}>
+          <Tile className="col-span-4 md:col-span-5 p-8" index={9}>
             <div id="about" />
             <div className="font-mono text-[10px] text-cyan tracking-widest mb-4">
               ABOUT // EDU
