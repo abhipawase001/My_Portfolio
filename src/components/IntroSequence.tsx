@@ -42,7 +42,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
       className="fixed inset-0 z-[100] bg-bg overflow-hidden flex items-end justify-center"
       style={{
         backgroundImage:
-          "radial-gradient(ellipse at 50% 100%, rgba(0,245,255,0.10), transparent 60%), radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.02), transparent 70%)",
+          "radial-gradient(ellipse at 50% 100%, rgba(255,42,61,0.18), transparent 60%), radial-gradient(ellipse at 50% 50%, rgba(255,255,255,0.02), transparent 70%)",
       }}
     >
       {/* Floor reflection */}
@@ -82,7 +82,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
           duration: phase === "out" ? 0.7 : 3.0,
           ease: phase === "out" ? "easeIn" as const : [0.22, 1, 0.36, 1] as const,
         }}
-        className="relative z-10 h-[88vh] w-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_60px_rgba(0,245,255,0.25)]"
+        className="relative z-10 h-[88vh] w-auto object-contain select-none pointer-events-none drop-shadow-[0_30px_60px_rgba(255,42,61,0.35)]"
         draggable={false}
       />
 
@@ -112,14 +112,14 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
               delay: phase !== "walk" ? i * 0.18 : 0,
               ease: [0.16, 1, 0.3, 1] as const,
             }}
-            className="font-display font-extrabold leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,11rem)]"
+            className={`font-display font-extrabold leading-[0.85] tracking-tighter text-[clamp(3rem,12vw,11rem)] ${phase === "name" ? "text-glow" : ""}`}
             style={{
-              color: i === 0 ? "#f2f2f2" : "#00f5ff",
+              color: i === 0 ? "#fff5f5" : "#ff2a3d",
               animation: phase === "name" ? `glitch 0.3s steps(2) ${0.6 + i * 0.18}s 2` : undefined,
               textShadow:
                 i === 1
-                  ? "0 0 40px rgba(0,245,255,0.5), 0 0 80px rgba(0,245,255,0.25)"
-                  : undefined,
+                  ? "0 0 40px rgba(255,42,61,0.6), 0 0 80px rgba(255,42,61,0.3)"
+                  : "0 0 24px rgba(255,245,245,0.25)",
             }}
           >
             {word}
