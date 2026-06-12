@@ -62,7 +62,7 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
               </h1>
             </div>
             <div className="p-6 md:p-10 w-full md:w-80 flex flex-col justify-between bg-card">
-              <div className="font-mono text-[10px] leading-relaxed text-black uppercase tracking-wider">
+              <div className="font-mono text-[10px] leading-relaxed text-ink uppercase tracking-wider">
                 AI Architect & Full-Stack Engineer
                 <br />
                 Google Student Ambassador
@@ -148,7 +148,7 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
 
               {/* Sub project grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-line border border-line">
-                <Reveal className="bg-bg p-6 group hover:bg-card transition-colors" index={2}>
+                <Reveal className="bg-bg p-6 group hover:bg-card transition-colors" index={1}>
                   <div className="flex justify-between items-start mb-12">
                     <span className="font-mono text-xs text-ink/60">02 / URBAN TRANSIT</span>
                     <div className="size-10 border border-line grid place-items-center group-hover:bg-cyan group-hover:border-cyan transition-colors">
@@ -164,11 +164,12 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
                     src={sarthiImg}
                     alt="Project Sarthi"
                     loading="lazy"
-                    className="w-full aspect-[16/9] object-cover border border-line grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full aspect-[16/9] object-cover border border-line grayscale hover:grayscale-0 transition-all duration-700"
+
                   />
                 </Reveal>
 
-                <Reveal className="bg-bg p-6 group hover:bg-card transition-colors" index={3}>
+                <Reveal className="bg-bg p-6 group hover:bg-card transition-colors" index={1}>
                   <div className="flex justify-between items-start mb-12">
                     <span className="font-mono text-xs text-ink/60">03 / FULL-STACK</span>
                     <div className="size-10 border border-line grid place-items-center group-hover:bg-cyan group-hover:border-cyan transition-colors">
@@ -184,7 +185,7 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
                     src={milanImg}
                     alt="Milan Tours"
                     loading="lazy"
-                    className="w-full aspect-[16/9] object-cover border border-line grayscale group-hover:grayscale-0 transition-all duration-700"
+                    className="w-full aspect-[16/9] object-cover border border-line grayscale hover:grayscale-0 transition-all duration-700"
                   />
                 </Reveal>
               </div>
@@ -197,7 +198,7 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
                 <img
                   src={portrait.url}
                   alt="Abhijit Pawase"
-                  className="w-full aspect-[3/4] object-cover border border-line grayscale hover:grayscale-0 transition-all duration-700 mb-4"
+                  className="w-full aspect-[3/4] object-cover border border-line mb-4"
                 />
                 <div className="flex justify-between font-mono text-[10px] tracking-widest text-cyan">
                   <span>SUBJECT_01</span>
