@@ -62,7 +62,7 @@ export function Portfolio({ onReplayIntro }: { onReplayIntro?: () => void }) {
               </h1>
             </div>
             <div className="p-6 md:p-10 w-full md:w-80 flex flex-col justify-between bg-card">
-              <div className="font-mono text-[10px] leading-relaxed text-ink/70 uppercase tracking-wider">
+              <div className="font-mono text-[10px] leading-relaxed text-black uppercase tracking-wider">
                 AI Architect & Full-Stack Engineer
                 <br />
                 Google Student Ambassador
