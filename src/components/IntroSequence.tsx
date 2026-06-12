@@ -124,7 +124,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
               }`}
               style={{
                 color: i === 1 ? "#67e8f9" : "#f8fafc",
-                fontSize: i === 1 ? "clamp(2rem, 7vw, 6rem)" : "clamp(3.2rem, 12vw, 11rem)",
+                fontSize: i === 1 ? "clamp(1.4rem, 4vw, 3rem)" : "clamp(2rem, 6.5vw, 5.5rem)",
               }}
             >
               {line}
