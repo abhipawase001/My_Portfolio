@@ -48,7 +48,17 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
       transition={{ duration: 0.3, ease: [0.3, 0, 0, 1] as const }}
       className="fixed inset-0 z-[100] bg-bg overflow-hidden"
     >
-      {/* Walking video — full-body preset: contained, top-aligned so face/head never crops */}
+      {/* Blurred backdrop fills the screen so there are no black bars */}
+      <video
+        src={walkVideo.url}
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover scale-110 blur-2xl opacity-60"
+        aria-hidden
+      />
+      {/* Main walking video — full body always visible, no crop */}
       <video
         ref={videoRef}
         src={walkVideo.url}
@@ -56,7 +66,7 @@ export function IntroSequence({ onDone }: { onDone: () => void }) {
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover object-top bg-bg"
+        className="absolute inset-0 w-full h-full object-contain object-center"
       />
 
       {/* Vignette */}
